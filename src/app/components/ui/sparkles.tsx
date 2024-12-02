@@ -1,5 +1,5 @@
 "use client";
-import React, { useId } from "react";
+import React, { useId, useMemo } from "react";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, SingleOrMultiple } from "@tsparticles/engine";
@@ -23,6 +23,9 @@ export const SparklesCore = (props: ParticlesProps) => {
     id,
     className,
     background,
+    minSize,
+    maxSize,
+    speed,
     particleColor,
     particleDensity,
   } = props;
@@ -232,21 +235,18 @@ export const SparklesCore = (props: ParticlesProps) => {
               opacity: {
                 value: {
                   min: 0.1,
-                  max: 0.8,
+                  max: 1,
                 },
                 animation: {
-                //   count: 0,
-                //   enable: true,
-                //   speed: speed || 4,
-                //   decay: 0,
-                //   delay: 0,
-                //   sync: false,
-                //   mode: "auto",
-                //   startValue: "random",
-                //   destroy: "none",
-                enable: true,
-    speed: 1.5, // Speed of the pulse
-    sync: true, // Syncs the opacity pulse across particles
+                  count: 0,
+                  enable: true,
+                  speed: speed || 4,
+                  decay: 0,
+                  delay: 0,
+                  sync: false,
+                  mode: "auto",
+                  startValue: "random",
+                  destroy: "none",
                 },
               },
               reduceDuplicates: false,
@@ -267,32 +267,21 @@ export const SparklesCore = (props: ParticlesProps) => {
                 options: {},
                 type: "circle",
               },
-            //   size: {
-            //     value: {
-            //       min: minSize || 1,
-            //       max: maxSize || 3,
-            //     },
-            //     animation: {
-            //       count: 0,
-            //       enable: false,
-            //       speed: 5,
-            //       decay: 0,
-            //       delay: 0,
-            //       sync: false,
-            //       mode: "auto",
-            //       startValue: "random",
-            //       destroy: "none",
-            //     },
-            //   },
-            size: {
+              size: {
                 value: {
-                  min: 3, // Minimum size during pulse
-                  max: 8, // Maximum size during pulse
+                  min: minSize || 1,
+                  max: maxSize || 3,
                 },
                 animation: {
-                  enable: true,
-                  speed: 1.5, // Matches opacity animation speed for sync
-                  sync: true, // Syncs the size pulse across particles
+                  count: 0,
+                  enable: false,
+                  speed: 5,
+                  decay: 0,
+                  delay: 0,
+                  sync: false,
+                  mode: "auto",
+                  startValue: "random",
+                  destroy: "none",
                 },
               },
               stroke: {
