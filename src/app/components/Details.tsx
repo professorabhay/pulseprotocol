@@ -19,7 +19,7 @@ export default function Details() {
           <div className="text-center animate-fadeIn" style={{animationDelay: '0.4s'}}>
             <Shield className="w-12 h-12 mx-auto mb-4 text-white animate-pulse" />
             <h3 className="text-xl font-semibold mb-2">Secure & Transparent</h3>
-            <p className="text-gray-300">Your data remains protected and immutable, secured by Arweave's permanent storage solution.</p>
+            <p className="text-gray-300">Your data remains protected and immutable, secured by Arweave&apos;s permanent storage solution.</p>
           </div>
         </div>
       </div>

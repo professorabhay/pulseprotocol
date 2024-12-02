@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Cover } from "@/app/components/ui/cover";
 import Header from './components/Header'
 import Footer from "./components/Footer";
