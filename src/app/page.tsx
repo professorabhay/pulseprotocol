@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import { RevealOnScroll } from "./components/ui/reveal-on-scroll";
-import Header from "./components/header";
+import Header from "./components/Header";
 import React from "react";
 import { BentoDemo } from "./components/Features-Bento2";
 import { catchyLine as CatchyLine } from "./components/catchyline";
