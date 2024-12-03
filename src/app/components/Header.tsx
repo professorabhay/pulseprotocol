@@ -52,7 +52,7 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center gap-8">
           <Link
-            href="https://x.com/Pulseprotocolao"
+            href="https://x.com/Pulseao"
             target="_blank"
             className="text-base text-gray-300 hover:text-white transition-colors"
           >
