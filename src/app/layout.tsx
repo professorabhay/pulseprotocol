@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Pulse Protocol",
-  description: "Social Graph Built On AO",
+  description: "A social graph protocol running on AO by Arweave.",
 };
 
 export default function RootLayout({
